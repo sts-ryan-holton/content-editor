@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="jQuery Content Editor Plugin">
+    <meta name="keywords" content="HTML, CSS, JS, jQuery, content editor, open source, concept">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="docs/favicon.png"/>
+    <title>jQuery Content Editor Plugin</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://sts-ryan-holton.github.io/content-editor/">
+          Content Editor
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-white" href="https://github.com/sts-ryan-holton/content-editor/releases" download>
+                Download v1.0.0
+              </a>
+              <a class="button is-white" href="https://github.com/sts-ryan-holton/content-editor" target="_blank">
+                <span class="icon is-small">
+                  <i class="fab fa-github"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-medium is-info">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-three-quarters">
+              <h1 class="title has-text-weight-light">
+                <strong class="has-text-weight-bold">jQuery:</strong> Content Editor plugin
+              </h1>
+              <h2 class="subtitle">
+                edit your website content live in the browser.
+              </h2>
+              <div class="buttons">
+                <a class="button is-medium is-light" href="https://github.com/sts-ryan-holton/content-editor/releases" download>Download v1.0.0</a>
+                <a class="button is-outlined is-light is-medium" href="https://github.com/sts-ryan-holton/content-editor">View Github</a>
+              </div>
+            </div>
+            <div class="column has-text-right is-hidden-mobile">
+              <i class="fas fa-pencil-ruler fa-6x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="npm-install" class="hero is-small is-light">
+      <div class="hero-body el-scrollable">
+        <div class="container">
+          <div class="columns is-mobile">
+            <div class="column align-items-center">
+<pre class="is-paddingless is-light"><code id="npm_text">npm install content-editor --save</code></pre>
+            </div>
+            <div class="column has-text-right">
+              <button id="npm" class="button is-warning is-small">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <article class="message is-danger is-hidden js__support-notice">
+          <div class="message-header">
+            <p class="is-marginless">Browser Support</p>
+          </div>
+          <div class="message-body">
+            Your browser doesn't appear to support the <code>contenteditble</code> attribute. Without this, the plugin likely won't work for you.
+          </div>
+        </article>
+        <h2 id="install-download" class="title section-anchor">1. Download the plugin <a href="#install-download" class="anchor">#</a></h2>
+        <h3 class="subtitle">
+          Download the <strong>jQuery content editor</strong> plugin through NPM or through our Github page. Link to our <code>content-editor.js</code> and ensure to load jQuery before calling the plugin.
+        </h3>
+        <a class="button is-small is-light" href="https://github.com/sts-ryan-holton/content-editor/releases" download>Download v1.0.0</a>
+        <a class="button is-small is-light" href="https://www.npmjs.com/" target="_blank">View NPM page</a>
+        <hr />
+        <h2 id="install-init" class="title section-anchor">2. Initialise it <a href="#install-init" class="anchor">#</a></h2>
+        <h3 class="subtitle">
+          Once installed, initialise the plugin before the closing <code>&LT;/body&GT;</code> tag.
+        </h3>
+<pre><code>&LT;script&GT;
+  $(function() {
+    $('body').contentEditor();
+  });
+&LT;/script&GT;</code></pre>
+        <br />
+        <p>
+          We initialise the plugin on the <code>&LT;body&GT;</code> so that <strong>everything</strong> is editble, however you can change this to another class or ID selector.
+        </p>
+        <hr />
+        <h2 id="install-next" class="title section-anchor">3. You're all set! <a href="#install-next" class="anchor">#</a></h2>
+        <h3 class="subtitle">
+          And that's it! Simply edit content on your website. Next, take a look at our <a href="#options">options.</a>
+        </h3>
+      </div>
+    </section>
+    <section id="demo" class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title section-anchor">Demo <a href="#demo" class="anchor">#</a></h2>
+              <h3 class="subtitle">
+                Try <strong>editing content live on this page</strong> and through our demo content below:
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div id="editable-area" class="box">
+          <h2 class="title">Edit this title</h2>
+          <h3 class="subtitle">
+            Edit this subtitle
+          </h3>
+          <p>
+            Quisque id tellus non est porttitor viverra. Phasellus porttitor ut ligula quis mollis. Morbi eros risus, vulputate eu congue quis, interdum nec nisi. Donec ex purus, ullamcorper placerat tellus non, volutpat luctus sem. Curabitur facilisis enim vitae magna porta, non ullamcorper metus viverra. Donec et vulputate est. Donec nulla ligula, vehicula vitae dolor a, fermentum blandit nisl. Nam pulvinar neque quis mollis pulvinar.
+          </p>
+          <p>
+            Quisque id tellus non est porttitor viverra. Phasellus porttitor ut ligula quis mollis. Morbi eros risus, vulputate eu congue quis, interdum nec nisi. Donec ex purus, ullamcorper placerat tellus non, volutpat luctus sem. Curabitur facilisis enim vitae magna porta, non ullamcorper metus viverra. Donec et vulputate est. Donec nulla ligula, vehicula vitae dolor a, fermentum blandit nisl. Nam pulvinar neque quis mollis pulvinar.
+          </p>
+          <p>
+            <a class="button" href="https://example.com/" target="_blank">https://example.com/</a>
+          </p>
+          <p class="is-marginless">
+            Quisque id tellus non est porttitor viverra. Phasellus porttitor ut ligula quis mollis. Morbi eros risus, vulputate eu congue quis, interdum nec nisi. Donec ex purus, ullamcorper placerat tellus non, volutpat luctus sem. Curabitur facilisis enim vitae magna porta, non ullamcorper metus viverra. Donec et vulputate est. Donec nulla ligula, vehicula vitae dolor a, fermentum blandit nisl. Nam pulvinar neque quis mollis pulvinar.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="options" class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h2 class="title section-anchor">Plugin Options <a href="#options" class="anchor">#</a></h2>
+              <h3 class="subtitle">
+                Configure the plugin using our provided options.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3 class="subtitle">
+          Add options to our plugin:
+        </h3>
+<pre><code>&LT;script&GT;
+  $(function() {
+    $('body').contentEditor({
+      option: value
+    });
+  });
+&LT;/script&GT;</code></pre>
+        <br />
+        <h3 class="subtitle">
+          Use our options for setting how you want to use our plugin:
+        </h3>
+        <div class="table-responsive">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>enableUrlQuery</td>
+                <td>boolean</td>
+                <td><code>false</code></td>
+                <td>Edit content on the page when the URL query is enabled, <code>false</code> by default.</td>
+              </tr>
+              <tr>
+                <td>urlQuery</td>
+                <td>string</td>
+                <td><code>"contentEditable"</code></td>
+                <td>Specify the query to enter into the URL for editing content. <strong>Specify <code>true</code> as the value</strong></td>
+              </tr>
+              <tr>
+                <td>removeFocus</td>
+                <td>boolean</td>
+                <td><code>false</code></td>
+                <td>Remove focusable outline from editable content <strong>(not recommended)</strong>.</td>
+              </tr>
+              <tr>
+                <td>excludeItems</td>
+                <td>string</td>
+                <td><code>null</code></td>
+                <td>Specify elements to exclude such as buttons or anchors. The string provided is the name of the element and can be multiple, <strong>e.g: <code>'a, button, div'</code></strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>jQuery Content Editor Plugin</strong> by <a href="https://github.com/sts-ryan-holton" target="_blank">Ryan Holton</a> and <a href="https://github.com/sts-ryan-holton/content-editor/graphs/contributors" target="_blank">Contributors</a>. The source code is licensed
+          <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+      $(function() {
+        $('#editable-area').contentEditor({
+          excludeItems: 'p'
+        });
+      });
+    </script>
+  </body>
+</html>

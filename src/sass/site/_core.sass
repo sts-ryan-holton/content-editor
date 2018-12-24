@@ -1,0 +1,27 @@
+.align-items-center
+  display: flex
+  align-items: center
+
+.example
+  padding: 3rem
+
+p
+  margin-bottom: 1rem
+
+.section-anchor
+  .anchor
+    opacity: 0
+    padding-left: .5rem
+    padding-right: .5rem
+    font-weight: 300
+  &:hover
+    .anchor
+      opacity: 1
+      &:hover
+        opacity: .85
+
+.table-responsive,
+.el-scrollable
+  display: block
+  width: 100%
+  overflow-x: auto

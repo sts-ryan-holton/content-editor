@@ -1,0 +1,43 @@
+{
+  "name": "content-editor",
+  "version": "0.0.1",
+  "description": ":pencil: live content editor jQuery plugin. Edit content live on a website for mockups and collaborating with others.",
+  "scripts": {
+    "test": "test",
+    "sass": "gulp sass",
+    "watch": "gulp watch",
+    "bundle": "gulp dev-scripts && gulp plugin-js && gulp plugin-js-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sts-ryan-holton/content-editor.git"
+  },
+  "keywords": [
+    "jquery",
+    "content",
+    "editor",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Ryan Holton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sts-ryan-holton/content-editor/issues"
+  },
+  "homepage": "https://sts-ryan-holton.github.io/content-editor/",
+  "devDependencies": {
+    "bulma": "^0.7.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-watch": "^5.0.1",
+    "stylelint": "^9.9.0"
+  }
+}
