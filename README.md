@@ -24,7 +24,7 @@ Our plugin uses the `contenteditble` attribute. **This appears to be widely supp
 </script>
 ```
 
-3. Yu're all set! Take a look at our available plugin [options](https://sts-ryan-holton.github.io/content-editor/#options)
+3. You're all set! Take a look at our available plugin [options](https://sts-ryan-holton.github.io/content-editor/#options)
 
 ## :rocket: Plugin Options
 
