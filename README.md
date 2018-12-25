@@ -5,6 +5,7 @@ Editing content without the use of the **inspector** is somewhat impossible. Thi
 - Easy to install.
 - Less than `5kb` minified.
 - Utilises the `contenteditble` attribute.
+- **[View demo site](https://sts-ryan-holton.github.io/content-editor/)**
 
 ### :rotating_light: Browser Support
 
