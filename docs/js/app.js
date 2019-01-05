@@ -1,14 +1,13 @@
 (function($) {
   $.fn.contentEditor = function( options ) {
     const settings = $.extend({
-      enableUrlQuery:  false,
-      urlQuery:        'contentEditable',
+      urlQuery:        null,
       removeFocus:     false,
       excludeItems:    null
     }, options);
     const contentEditor = this
     return this.each(function(t) {
-      if (settings.enableUrlQuery == true) {
+      if (settings.urlQuery != null) {
         if (window.location.href.indexOf(settings.urlQuery) > -1) {
           $(contentEditor).find('*').attr('contenteditable', true);
           if (settings.excludeItems != null) {
@@ -29,7 +28,7 @@
           });
         }
         if (window.location.href.indexOf(settings.urlQuery) > -1) {
-          console.log('jQuery Content Editor: Warning: You do not need to specify a URL query with enableUrlQuery set to false.')
+          console.log('jQuery Content Editor: Warning: You do not need to specify a URL query with urlQuery enabled.')
         }
       }
       if (settings.removeFocus == true) {
