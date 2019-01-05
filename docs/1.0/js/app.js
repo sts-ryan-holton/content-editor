@@ -45,9 +45,6 @@ $(function() {
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
   });
-  $(".js_version-btn").click(function() {
-    $(".js_version-dropdown").toggleClass("is-active");
-  });
   function copyToClipboard(elementId) {
     var aux = document.createElement("input");
     aux.setAttribute("value", document.getElementById(elementId).innerHTML);

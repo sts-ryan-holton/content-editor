@@ -1,0 +1,8 @@
+# Content Editor XML Robots.txt
+
+# Sitemap:
+Sitemap: https://sts-ryan-holton.github.io/content-editor/sitemap.xml
+
+# All crawlers welcome:
+User-agent: *
+Disallow:
