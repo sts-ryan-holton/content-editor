@@ -31,18 +31,6 @@ Our plugin uses the `contenteditble` attribute. **This appears to be widely supp
 
 We have a range of useful [plugin options](https://sts-ryan-holton.github.io/content-editor/#options) that you can use to get started.
 
-```
-<script>
-  $(function() {
-    $('#editable-area').contentEditor({
-      enableUrlQuery:   false,              // 'boolean' Edit content on the page when the URL query is enabled.
-      urlQuery:         'contentEditable',  // 'string' Specify query URL for editing content. Specify 'true' as a value.
-      removeFocus:      false               // 'boolean' remove focusable outline from editable content (not recommended).
-    });
-  });
-</script>
-```
-
 ## :wrench: Issues
 
 Submit a new relevant issue here: https://github.com/sts-ryan-holton/content-editor/issues/new?template=bug_report.md
