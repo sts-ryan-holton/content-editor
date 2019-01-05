@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="jQuery Content Editor Plugin">
-    <meta name="keywords" content="HTML, CSS, JS, jQuery, content editor, open source, concept">
+    <meta name="keywords" content="HTML, CSS, JS, jQuery, content editor, open source">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
     <title>jQuery Content Editor Plugin</title>
@@ -110,7 +110,7 @@
         </article>
         <h2 id="install-download" class="title section-anchor">1. Download the plugin <a href="#install-download" class="anchor">#</a></h2>
         <h3 class="subtitle">
-          Download the <strong>jQuery content editor</strong> plugin through NPM or through our Github page. Link to our <code>content-editor.js</code> and ensure to load jQuery before calling the plugin.
+          Download the <strong>jQuery content editor</strong> plugin through NPM or through our Github page. Link to our <code>content-editor-min.js</code> and ensure to load jQuery before calling the plugin.
         </h3>
         <div class="buttons">
           <a class="button is-primary" href="https://github.com/sts-ryan-holton/content-editor/archive/1.1.0.zip" download>
@@ -149,7 +149,7 @@
             <div class="column">
               <h2 class="title section-anchor">Demo <a href="#demo" class="anchor">#</a></h2>
               <h3 class="subtitle">
-                Try <strong>editing content live on this page</strong> and through our demo content below:
+                Try <strong>editing content</strong> below:
               </h3>
             </div>
           </div>
@@ -210,7 +210,7 @@
 &LT;/script&GT;</code></pre>
         <br />
         <h3 class="subtitle">
-          Use our options for setting how you want to use our plugin:
+          Use our options for choosing how you want to use our plugin:
         </h3>
         <div class="table-responsive">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth">
@@ -224,25 +224,19 @@
             </thead>
             <tbody>
               <tr>
-                <td>enableUrlQuery</td>
-                <td>boolean</td>
-                <td><code>false</code></td>
-                <td>Edit content on the page when the URL query is enabled, <code>false</code> by default.</td>
-              </tr>
-              <tr>
-                <td>urlQuery</td>
+                <td>url</td>
                 <td>string</td>
-                <td><code>"contentEditable"</code></td>
-                <td>Specify the query to enter into the URL for editing content. <strong>Specify <code>true</code> as the value</strong></td>
+                <td><code>null</code></td>
+                <td>Specify the query to enter into the URL for editing content.<strong>This cannot be a number.</strong></td>
               </tr>
               <tr>
-                <td>removeFocus</td>
+                <td>focusable</td>
                 <td>boolean</td>
                 <td><code>false</code></td>
-                <td>Remove focusable outline from editable content <strong>(not recommended)</strong>.</td>
+                <td>Remove outline from editable content <strong>(not recommended)</strong>.</td>
               </tr>
               <tr>
-                <td>excludeItems</td>
+                <td>exclude</td>
                 <td>string</td>
                 <td><code>null</code></td>
                 <td>Specify elements to exclude such as buttons or anchors. The string provided is the name of the element and can be multiple, <strong>e.g: <code>'a, button, div'</code></strong>.</td>
@@ -255,7 +249,7 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>jQuery Content Editor Plugin</strong> by <a href="https://github.com/sts-ryan-holton" target="_blank">Ryan Holton</a> and <a href="https://github.com/sts-ryan-holton/content-editor/graphs/contributors" target="_blank">Contributors</a>. The source code is licensed
+          <strong>jQuery Content Editor Plugin</strong> by <a href="https://github.com/sts-ryan-holton" target="_blank">Ryan Holton</a> and <a href="https://github.com/sts-ryan-holton/content-editor/graphs/contributors" target="_blank">contributors</a>. The source code is licensed
           <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
       </div>

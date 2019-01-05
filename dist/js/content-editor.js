@@ -1,40 +1,43 @@
-(function($) {
-  $.fn.contentEditor = function( options ) {
-    const settings = $.extend({
-      urlQuery:        null,
-      removeFocus:     false,
-      excludeItems:    null
+"use strict";
+
+(function ($) {
+  $.fn.contentEditor = function (options) {
+    var settings = $.extend({
+      url: null,
+      focusable: false,
+      exclude: null
     }, options);
-    const contentEditor = this
-    return this.each(function(t) {
-      if (settings.urlQuery != null) {
-        if (window.location.href.indexOf(settings.urlQuery) > -1) {
+    var contentEditor = this;
+    return this.each(function (t) {
+      if (settings.url != null && typeof settings.url != 'number') {
+        if (window.location.href.indexOf(settings.url) > -1) {
           $(contentEditor).find('*').attr('contenteditable', true);
-          if (settings.excludeItems != null) {
-            var exclude = settings.excludeItems;
-            var excludeElements = exclude.split(",");
-            $.each(excludeElements, function(i, val) {
+
+          if (settings.exclude != null) {
+            var exclude = settings.exclude;
+            var excludeElements = exclude.split(',');
+            $.each(excludeElements, function (i, val) {
               $(val).attr('contenteditable', false);
             });
           }
         }
       } else {
         $(contentEditor).find('*').attr('contenteditable', true);
-        if (settings.excludeItems != null) {
-          var exclude = settings.excludeItems;
-          var excludeElements = exclude.split(",");
-          $.each(excludeElements, function(i, val) {
+
+        if (settings.exclude != null) {
+          var _exclude = settings.exclude;
+
+          var _excludeElements = _exclude.split(',');
+
+          $.each(_excludeElements, function (i, val) {
             $(val).attr('contenteditable', false);
           });
         }
-        if (window.location.href.indexOf(settings.urlQuery) > -1) {
-          console.log('jQuery Content Editor: Warning: You do not need to specify a URL query with urlQuery enabled.')
-        }
       }
-      if (settings.removeFocus == true) {
+
+      if (settings.focusable === true) {
         $(contentEditor).find('*').css('outline', 'none');
-        console.log('jQuery Content Editor: For accessibility reasons we recommend keeping focus enabled.')
       }
-    })
-  }
-}(jQuery))
+    });
+  };
+})(jQuery);

@@ -27,8 +27,11 @@
   },
   "homepage": "https://sts-ryan-holton.github.io/content-editor/",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "bulma": "^0.7.2",
     "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-cli": "^2.0.1",

@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 const minify = require('gulp-minify');
 const concat = require('gulp-concat');
 const notify = require("gulp-notify");
@@ -43,9 +44,13 @@ gulp.task('dev-scripts', function() {
     'src/js/app.js'
   ])
   .pipe(concat('app.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
   .pipe(gulp.dest('docs/js/'))
   .pipe(notify({ message: 'Compiled Dev Scripts successfully.' }));
 });
+
 
 // Compile Plugin JS
 gulp.task('plugin-js', function() {
@@ -53,6 +58,9 @@ gulp.task('plugin-js', function() {
     'src/js/lib/content-editor.js'
   ])
   .pipe(concat('content-editor.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
   .pipe(gulp.dest('dist/js/'))
   .pipe(notify({ message: 'Compiled Plugin JS successfully.' }));
 });
@@ -62,6 +70,9 @@ gulp.task('plugin-js', function() {
 gulp.task('plugin-js-minify', function() {
   gulp.src(['src/js/lib/*.js'])
     .pipe(minify())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(gulp.dest('dist/js/'))
     .pipe(notify({ message: 'Bundle JS successfully.' }));
 });
