@@ -1,6 +1,6 @@
 {
   "name": "@ryan.holton/content-editor",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": ":pencil: live content editor jQuery plugin. Edit content live on a website for mockups and collaborating with others.",
   "scripts": {
     "test": "test",
