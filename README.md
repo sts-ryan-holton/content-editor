@@ -3,7 +3,7 @@
 Editing content without the use of the **inspector** is somewhat impossible. This small jQuery plugin allows you to edit content on your website easily.
 
 - Easy to install.
-- Less than `5kb` minified.
+- Less than `2.5kb` minified.
 - Utilises the `contenteditble` attribute.
 - **[View demo site](https://sts-ryan-holton.github.io/content-editor/)**
 
